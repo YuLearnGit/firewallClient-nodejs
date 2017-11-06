@@ -17,6 +17,7 @@
     "electron": "~1.6.2"
   },
   "dependencies": {
+    "getmac": "^1.2.1",
     "mysql": "^2.14.1"
   }
 }

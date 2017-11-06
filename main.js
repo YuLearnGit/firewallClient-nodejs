@@ -35,10 +35,11 @@ prodev.getDevType();
 */
 
 //测试扫描设备
-
+//var devMac = require('./tools/getLocalMAC.js');
+//devMac.getLocalMAC();
 
 var devScan = require('./tools/deviceScan.js');
-var scan = new devScan("172.16.10.73", "172.16.10.77");
+var scan = new devScan("172.16.10.135", "172.16.10.138");
 
 var devCheck = require('./classes/deviceCheck.js');
 var check = new devCheck();
@@ -61,7 +62,7 @@ var modbusForm = require('./forms/modbusTcpRulesForm.js');
 var OPCForm = require('./forms/OPCRulesForm.js');
 var DNP3Form = require('./forms/DNP3RulesForm.js');
 var whlForm = require('./forms/whiteListForm.js');
-//dpi.configModbusTcpRules(new protectDeviceForm("172.16.10.76", "MAC"), new modbusForm("any", "any", 12292, 12292, 6, 10, 700), true, false);
+//dpi.configModbusTcpRules(new protectDeviceForm("172.16.10.200", "28:63:36:95:d1:8d"), new modbusForm("any", "any", 12292, 12292, 6, 10, 700), true, true);
 //dpi.configOPCRules(new protectDeviceForm("172.16.10.76", "MAC"), new OPCForm("any", "any"), true, false);
 //dpi.configDNP3Rules(new protectDeviceForm("172.16.10.76", "MAC"), new DNP3Form("any", "any"), true, true);
 
@@ -82,4 +83,12 @@ var NAT = require('./classes/configNATRules.js');
 //NAT.configSNATRules(new fwdev("172.16.10.76", "MAC"), "eth3", "192.16.10.1", "172.16.10.1", "255.255.255.0", false);
 //NAT.configDNATRules(new fwdev("172.16.10.19", "MAC"), "192.16.10.1", "23", "172.16.10.254", "any", false);
 var log = require('./classes/receiveLog.js');
-log.receiveLog();
+//log.receiveLog();
+
+//测试mongodb
+// var mongo = require('./tools/dbOperations-mongo.js');
+// var data = {
+//     "name": "菜鸟教程",
+//     "url": "www.runoob.com"
+// };
+// mongo.deleteData(data, 'site');
