@@ -39,7 +39,7 @@ prodev.getDevType();
 //devMac.getLocalMAC();
 
 var devScan = require('./tools/deviceScan.js');
-var scan = new devScan("172.16.10.135", "172.16.10.138");
+var scan = new devScan("172.16.10.202", "172.16.10.205");
 
 var devCheck = require('./classes/deviceCheck.js');
 var check = new devCheck();
